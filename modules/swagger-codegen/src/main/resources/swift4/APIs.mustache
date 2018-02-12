@@ -14,9 +14,9 @@ open class {{projectName}}API {
 }
 
 open class RequestBuilder<T> {
-    var credential: URLCredential?
-    var headers: [String:String]
-    public let parameters: [String:Any]?
+    private(set) public var credential: URLCredential?
+    private(set) public var headers: [String: String]
+    public let parameters: [String: Any]?
     public let isBody: Bool
     public let method: String
     public let URLString: String
